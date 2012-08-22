@@ -1,0 +1,102 @@
+<h1>Produto</h1>
+
+<p>
+  <b>Nome</b><br>
+  <%= @produto.nome %>
+</p>
+
+<p>
+  <b>Codigo</b><br>
+  <%= @produto.codigo %>
+</p>
+
+<p>
+  <b>Sabor</b><br>
+  <%= @produto.sabor %>
+</p>
+
+<p>
+  <b>Observacoes</b><br>
+  <%= @produto.observacoes %>
+</p>
+
+<p>
+  <b>Porcao</b><br>
+  <%= @produto.porcao %>
+</p>
+
+<p>
+  <b>Peso</b><br>
+  <%= @produto.peso %>
+</p>
+
+<p>
+  <b>Calorias</b><br>
+  <%= @produto.calorias %>
+</p>
+
+<p>
+  <b>Proteinas</b><br>
+  <%= @produto.proteinas %>
+</p>
+
+<p>
+  <b>Gorduras totais</b><br>
+  <%= @produto.gorduras_totais %>
+</p>
+
+<p>
+  <b>Gorduras saturadas</b><br>
+  <%= @produto.gorduras_saturadas %>
+</p>
+
+<p>
+  <b>Gorduras trans</b><br>
+  <%= @produto.gorduras_trans %>
+</p>
+
+<p>
+  <b>Colesterol</b><br>
+  <%= @produto.colesterol %>
+</p>
+
+<p>
+  <b>Fibra</b><br>
+  <%= @produto.fibra %>
+</p>
+
+<p>
+  <b>Sodio</b><br>
+  <%= @produto.sodio %>
+</p>
+
+<p>
+  <b>Orientacoes</b><br>
+  <%= @produto.orientacoes %>
+</p>
+
+<p>
+  <b>Validade ambiente</b><br>
+  <%= @produto.validade_ambiente %>
+</p>
+
+<p>
+  <b>Validade resfriado</b><br>
+  <%= @produto.validade_resfriado %>
+</p>
+
+<p>
+  <b>Validade congelado</b><br>
+  <%= @produto.validade_congelado %>
+</p>
+
+<p>
+  <b>Conservacao</b><br>
+  <%= @produto.conservacao %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Voltar', produtos_path, :class => 'btn'  %>
+  <%= link_to 'Editar', edit_produto_path(@produto), :class => 'btn' %>
+  <%= link_to 'Excluir', produto_path(@produto), :method => 'delete', :confirm => 'Excluir Produto: tem certeza?', :class => 'btn btn-danger' %>
+</div>

@@ -1,0 +1,12 @@
+<h1>Ingrediente</h1>
+
+<p>
+  <b>Nome</b><br>
+  <%= @ingrediente.nome %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Voltar', ingredientes_path, :class => 'btn'  %>
+  <%= link_to 'Editar', edit_ingrediente_path(@ingrediente), :class => 'btn' %>
+  <%= link_to 'Excluir', ingrediente_path(@ingrediente), :method => 'delete', :confirm => 'Excluir ingrediente: Tem certeza?', :class => 'btn btn-danger' %>
+</div>

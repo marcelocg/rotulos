@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rótulos de Produtos - Deguste Sem limites</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to image_tag("logo.png", alt: "Deguste", :height => 82, :width => 164), 
+                  "/", :class => "brand" %>
+      <div class="nav-collapse">
+        <ul class="nav nav-pills pull-right">
+          <li><%= link_to "Produtos", produtos_path %></li>
+          <li><%= link_to "Ingredientes", ingredientes_path %></li>
+          <li><%= link_to "Etiquetas" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+      <a class="close" data-dismiss="alert">x</a>
+      <%= msg %>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="span1"></div>
+    <div class="span11" >
+      <%= yield %>
+    </div>  
+  </div>
+</div>
+</body>
+</html>

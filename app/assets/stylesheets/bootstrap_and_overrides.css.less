@@ -1,0 +1,87 @@
+@import "twitter/bootstrap/bootstrap";
+
+body { padding-top: 120px; }
+
+@import "twitter/bootstrap/responsive";
+
+
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+@redDeguste: rgb(215, 30, 38);
+@yellowDeguste: rgb(255, 203, 4);
+
+@hrBorder: @redDeguste;
+
+@linkColor: @redDeguste;
+@linkColorHover: darken(@linkColor, 15%);
+
+@navbarBackground: white;
+@navbarBackgroundHighlight: white;
+
+@navbarText: @redDeguste;
+@navbarLinkColor: @redDeguste;
+@navbarLinkColorHover: @yellowDeguste;
+@navbarLinkColorActive: @redDeguste;
+
+@navbarLinkBackgroundHover: transparent;
+@navbarLinkBackgroundActive: darken(@yellowDeguste, 5%);
+
+.watermark {
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 70%;
+  //opacity: 0.1;
+	border:0px solid @redDeguste;
+	border-radius: 6px;
+	margin: 0px 0px 10px 0px;
+	padding: 10px 15px 0px 15px;
+	width:100%;
+	height: 450px;
+}
+
+.fieldset input { width: 90%; }
+.fieldset textarea, select { width: 90%; height: 85px; }
+
+.bloco {
+    border-radius: 6px;
+    border-width:3px;
+    border-style:solid;
+    margin-bottom: 24px;
+    padding-left: 3px;
+}
+
+.bloco.red {
+    border-color: @redDeguste;
+}
+
+.bloco.yellow {
+    border-color: @yellowDeguste;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  // Vertically center the text given @navbarHeight
+  padding: (@navbarHeight * 2) 15px 0px;
+  color: @navbarLinkColor;
+  text-decoration: none;
+  text-shadow: 0 0 0 @navbarBackgroundHighlight;
+}
+
+.navbar-inner {
+	box-shadow: 0px 1px 3px rgb(215, 30, 38), 0px -1px 0px rgb(255, 203, 4) inset;
+}

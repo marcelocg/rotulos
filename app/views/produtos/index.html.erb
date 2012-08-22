@@ -1,0 +1,26 @@
+<h1>Produtos</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @produtos.each do |produto| %>
+      <tr>
+        <td><%= produto.id %></td>
+        <td><%= link_to produto.nome, produto_path(produto) %></td>
+        <td><%= produto.created_at %></td>
+        <td>
+          <%= link_to 'Editar', edit_produto_path(produto), :class => 'btn btn-mini' %>
+          <%= link_to 'Excluir', produto_path(produto), :method => :delete, :confirm => 'Excluir Produto: tem certeza?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Criar novo', new_produto_path, :class => 'btn btn-primary' %>

@@ -1,0 +1,24 @@
+<h1>Ingredientes</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ingredientes.each do |ingrediente| %>
+      <tr>
+        <td><%= ingrediente.id %></td>
+        <td><%= link_to ingrediente.nome, ingrediente_path(ingrediente) %></td>
+        <td>
+          <%= link_to 'Editar', edit_ingrediente_path(ingrediente), :class => 'btn btn-mini' %>
+          <%= link_to 'Excluir', ingrediente_path(ingrediente), :method => :delete, :confirm => 'Excluir Ingrediente: tem certeza?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Criar novo', new_ingrediente_path, :class => 'btn btn-primary' %>
