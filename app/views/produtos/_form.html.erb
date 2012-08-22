@@ -13,7 +13,10 @@
 
           <%= f.input :peso, :hint => "Peso ĺiquido da embalagem" %>
 
-          <%= f.association :ingredientes, :label_method => lambda { |i| "#{i.nome}" } %>
+            <div  id="ingredientes" class="bloco yellow">
+              <%= f.association :ingredientes, :label_method => lambda { |i| "#{i.nome}" }, 
+                                               :as => :check_boxes %>
+            </div>
           </fieldset>
         </div><!-- Dados basicos -->
 
