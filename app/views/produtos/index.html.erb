@@ -4,7 +4,8 @@
     <tr>
       <th>ID</th>
       <th>Nome</th>
-      <th>Created at</th>
+      <th>Sabor</th>
+      <th>Peso Líquido</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -13,7 +14,8 @@
       <tr>
         <td><%= produto.id %></td>
         <td><%= link_to produto.nome, produto_path(produto) %></td>
-        <td><%= produto.created_at %></td>
+        <td><%= produto.sabor %></td>
+        <td><%= produto.peso %></td>
         <td>
           <%= link_to 'Editar', edit_produto_path(produto), :class => 'btn btn-mini' %>
           <%= link_to 'Excluir', produto_path(produto), :method => :delete, :confirm => 'Excluir Produto: tem certeza?', :class => 'btn btn-mini btn-danger' %>

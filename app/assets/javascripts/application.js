@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+$(function() {
+  $('#fabricacao')
+  .datepicker({        
+    format: 'dd/mm/yyyy',
+    autoclose: true
+  });
+
+
+  $("form").submit(function(){
+    if($('.checkbox :checked').length == 0) {
+      $('#aviso').popover('show');
+      $('.popover-inner').on('click', '', function(){ $('#aviso').popover('hide'); })
+      return false;
+    }
+  });
+
+});

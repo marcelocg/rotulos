@@ -27,7 +27,11 @@ class Produto < ActiveRecord::Base
   validates_presence_of :porcao, :calorias, :proteinas
   validates_presence_of :gorduras_totais, :gorduras_saturadas, :gorduras_trans
   validates_presence_of :colesterol, :fibra, :sodio
-  validates_presence_of :validade_ambiente
   
   has_and_belongs_to_many :ingredientes
+
+  def nome_completo
+     self.nome + " - " + self.sabor
+  end
+
 end

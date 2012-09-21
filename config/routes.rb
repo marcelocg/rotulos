@@ -6,6 +6,8 @@ Rotulos::Application.routes.draw do
 
   resources :produtos
 
+  resources :etiquetas
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

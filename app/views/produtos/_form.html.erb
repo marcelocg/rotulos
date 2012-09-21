@@ -4,15 +4,17 @@
 
       <div class="row">
         <div  id="dados_basicos" class="span5 bloco red fieldset">
+          <legend>Dados basicos</legend>
           <fieldset>
-            <legend>Dados basicos</legend>
-          <%= f.input :codigo %>
-          <%= f.input :nome %>
-          <%= f.input :sabor, :hint => "Queijo, frango, etc" %>
-          <%= f.input :observacoes, :hint => "\"Nao contem gluten\", \"Contem ovos\"" %>
+            <%= f.input :codigo %>
+            <%= f.input :nome %>
+            <%= f.input :sabor, :hint => "Queijo, frango, etc" %>
+            <%= f.input :observacoes, :hint => "\"Nao contem gluten\", \"Contem ovos\"" %>
 
-          <%= f.input :peso, :hint => "Peso ĺiquido da embalagem" %>
-
+            <%= f.input :peso, :hint => "Peso ĺiquido da embalagem" %>
+            <div class="row">
+              <div class="span5" id="aviso" rel="popover" data-content="Pelo menos um ingrediente deve ser selecionado para o produto. <strong>Clique aqui para fechar.</strong>" data-original-title="Atenção" data-bitly-type="bitly_hover_card" data-placement="top"></div>
+            </div>
             <div  id="ingredientes" class="bloco yellow">
               <%= f.association :ingredientes, :label_method => lambda { |i| "#{i.nome}" }, 
                                                :as => :check_boxes %>
@@ -21,36 +23,36 @@
         </div><!-- Dados basicos -->
 
         <div  id="infos_nutricionais" class="span5 bloco yellow fieldset">
+          <legend>Informacoes Nutricionais</legend>
           <fieldset>
-            <legend>Informacoes Nutricionais</legend>
-          <%= f.input :porcao, :hint => "Porcao de referencia para informacao nutricional, em gramas" %>
-          <%= f.input :calorias %>
-          <%= f.input :proteinas %>
-          <%= f.input :gorduras_totais %>
-          <%= f.input :gorduras_saturadas %>
-          <%= f.input :gorduras_trans %>
-          <%= f.input :colesterol %>
-          <%= f.input :fibra %>
-          <%= f.input :sodio %>
+            <%= f.input :porcao, :hint => "Porcao de referencia para informacao nutricional, em gramas" %>
+            <%= f.input :calorias %>
+            <%= f.input :proteinas %>
+            <%= f.input :gorduras_totais %>
+            <%= f.input :gorduras_saturadas %>
+            <%= f.input :gorduras_trans %>
+            <%= f.input :colesterol %>
+            <%= f.input :fibra %>
+            <%= f.input :sodio %>
           </fieldset>
         </div><!-- Informacoes Nutricionais -->
       </div>
 
       <div class="row">
         <div  id="preparo" class="span5 bloco yellow fieldset">
+          <legend>Preparo</legend>
           <fieldset>
-            <legend>Preparo</legend>
-          <%= f.input :orientacoes %>
-          <%= f.input :conservacao %>
+            <%= f.input :orientacoes %>
+            <%= f.input :conservacao %>
           </fieldset>
         </div><!-- Preparo -->
 
         <div  id="validades" class="span5 bloco red fieldset">
+          <legend>Validades</legend>
           <fieldset>
-            <legend>Validades</legend>
-          <%= f.input :validade_ambiente, :hint => "Validade na temperatura ambiente, em dias" %>
-          <%= f.input :validade_resfriado, :hint => "Validade quando refrigerado, em dias" %>
-          <%= f.input :validade_congelado, :hint => "Validade quando congelado, em dias" %>
+            <%= f.input :validade_ambiente, :hint => "Validade na temperatura ambiente, em dias" %>
+            <%= f.input :validade_resfriado, :hint => "Validade quando refrigerado, em dias" %>
+            <%= f.input :validade_congelado, :hint => "Validade quando congelado, em dias" %>
           </fieldset>
         </div><!-- Validades -->
       </div>

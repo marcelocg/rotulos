@@ -40,3 +40,4 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'simple_form'
+gem 'prawn', :git => "git://github.com/prawnpdf/prawn.git"

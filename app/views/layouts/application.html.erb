@@ -19,13 +19,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <%= link_to image_tag("logo.png", alt: "Deguste", :height => 82, :width => 164), 
-                  "/", :class => "brand" %>
+      <%= link_to image_tag("logo-pequeno.png", alt: "Deguste"), "/", :class => "brand" %>
       <div class="nav-collapse">
         <ul class="nav nav-pills pull-right">
           <li><%= link_to "Produtos", produtos_path %></li>
           <li><%= link_to "Ingredientes", ingredientes_path %></li>
-          <li><%= link_to "Etiquetas" %></li>
+          <li><%= link_to "Etiquetas", etiquetas_path %></li>
         </ul>
       </div>
     </div>
