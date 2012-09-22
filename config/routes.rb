@@ -6,7 +6,8 @@ Rotulos::Application.routes.draw do
 
   resources :produtos
 
-  resources :etiquetas
+  match 'etiquetas' => 'etiquetas#index'
+  match 'etiquetas/gerar_etiquetas' => 'etiquetas#gerar_etiquetas', :via => :get, :defaults => { :format => 'pdf' }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
